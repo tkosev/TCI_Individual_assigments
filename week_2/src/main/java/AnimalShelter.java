@@ -22,13 +22,21 @@ public class AnimalShelter implements Serializable {
     }
 
     /**
+     * Method to return the animal list
+     * @return the animal list
+     */
+    public List<Animal> getAnimals() {
+        return animals;
+    }
+
+    /**
      * Method to add animal to the list
      * @param newAnimal the animal to be added
      */
     public void addAnimal(Animal newAnimal) {
-        if (!containsAnimal(newAnimal.getId())) {
+      /*  if (!shouldAllowToAddAnimal(newAnimal.getId())) {
             animals.add(newAnimal);
-        }
+        }*/
     }
 
     /**
@@ -36,13 +44,13 @@ public class AnimalShelter implements Serializable {
      * @param id the id of the animal
      * @return true if animal is found, false otherwise.
      */
-    public boolean containsAnimal(int id) {
-        for (Animal animal : animals) {
+    public boolean shouldAllowToAddAnimal(int id) {
+       /* for (Animal animal : animals) {
             if (animal.getId() == id) {
                 return true;
             }
-        }
-        return false;
+        }*/
+        return true;
     }
 
     /**
