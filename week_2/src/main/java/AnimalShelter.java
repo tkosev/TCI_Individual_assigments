@@ -51,9 +51,9 @@ public class AnimalShelter implements Serializable {
      * @param newAnimal the animal to be added
      */
     public void removeAnimal(Animal newAnimal) {
-      /*  if (shouldAllowToAddAnimal(newAnimal.getId())) {
+        if (shouldAllowToAddAnimal(newAnimal.getId())) {
             animals.remove(newAnimal);
-        }*/
+        }
     }
 
     /**
