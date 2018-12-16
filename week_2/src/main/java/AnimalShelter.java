@@ -23,6 +23,7 @@ public class AnimalShelter implements Serializable {
         animals = new ArrayList<>();
     }
 
+
     /**
      * Method to return the animal list
      *
@@ -41,6 +42,18 @@ public class AnimalShelter implements Serializable {
         if (!shouldAllowToAddAnimal(newAnimal.getId())) {
             animals.add(newAnimal);
         }
+    }
+
+
+    /**
+     * Method to add animal to the list
+     *
+     * @param newAnimal the animal to be added
+     */
+    public void removeAnimal(Animal newAnimal) {
+      /*  if (shouldAllowToAddAnimal(newAnimal.getId())) {
+            animals.remove(newAnimal);
+        }*/
     }
 
     /**
