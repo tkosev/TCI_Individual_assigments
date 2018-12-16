@@ -24,32 +24,22 @@ public class AnimalShelterTest {
     public void shouldAllowToAddAnimal() {
         AnimalShelter animalShelter = new AnimalShelter("My Shelter");
         int nrOfAnimals;
-
         Animal dog = createAnimal();
-
         //Add teh dog
         animalShelter.addAnimal(dog);
-
         // act
         boolean actual = animalShelter.shouldAllowToAddAnimal(dog.getId());
-
-        assertEquals(false, actual);
+        assertEquals(true, actual);
     }
 
     @Test
     public void getAnimalById() {
         AnimalShelter animalShelter = new AnimalShelter("My Shelter");
-
         Animal dog = createAnimal();
-
         //Add teh dog
         animalShelter.addAnimal(dog);
-
         Animal expectedDog = animalShelter.getAnimalById(dog.getId());
-
         assertEquals(expectedDog,dog);
-
-
     }
 
     private Animal createAnimal() {
